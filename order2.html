@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Penjualan Mobil</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+    </nav>
+    <header>
+      <h1>Silahkan Memilih</h1>
+      <nav>
+        <ul>
+          <li><a href="beranda.html">Home</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="about us.html">About us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="daftar-mobil">
+      <h2>Daftar Mobil yang Tersedia (BARU)</h2>
+      <ul>
+        <li>
+          <hr />
+          <h2>BUGATTI CHIRON</h2>
+          <img src="bg.jpg" width="400" />
+          <h3>Harga: $64,000</h3>
+          <button onclick="beliMobil('', 64000)">Beli</button>
+        </li>
+        <hr />
+        <li>
+          <h2>PORSCHE 911</h2>
+          <img src="pr.jpg" width="400" />
+          <h3>Harga: $50,000</h3>
+          <button onclick="beliMobil('', 50000)">Beli</button>
+        </li>
+        <hr />
+        <li>
+          <h2>ROLLS ROYCE</h2>
+          <img src="rl.jpg" width="400" />
+          <h3>Harga: $80,000</h3>
+          <button onclick="beliMobil('', 80000)">Beli</button>
+        </li>
+        <hr />
+        <li>
+          <h2>PAGANI HUAYRA</h2>
+          <img src="pg.jpg" width="400" />
+          <h3>Harga: $90,000</h3>
+          <button onclick="beliMobil('', 90000)">Beli</button>
+        </li>
+        <hr />
+        <li>
+          <h2>HINO DUTRO</h2>
+          <img src="hn.jpg" width="400" />
+          <h3>Harga: $100,000</h3>
+          <button onclick="beliMobil('', 100000)">Beli</button>
+        </li>
+        <hr />
+        <h2>Daftar Mobil yang Tersedia (BEKAS)</h2>
+        <li>
+          <hr />
+          <h2>SUPRA MK4</h2>
+          <img src="supra.jpg" width="400" />
+          <h3>Harga: $15,000</h3>
+          <button onclick="beliMobil('', 15000)">Beli</button>
+        </li>
+        <hr />
+        <li>
+          <h2>NISSAN SKYLINE R34</h2>
+          <img src="nsn.jpg" width="400" />
+          <h3>Harga: $20,000</h3>
+          <button onclick="beliMobil('', 20000)">Beli</button>
+        </li>
+        <hr />
+        <li>
+          <h2>MITSUBISHI EVO 10</h2>
+          <img src="mitsu.jpg" width="400" />
+          <h3>Harga: $25,000</h3>
+          <button onclick="beliMobil('', 25000)">Beli</button>
+        </li>
+        <hr />
+        <li>
+          <h2>KIJANG KRISTA</h2>
+          <img src="krista.jpeg" width="400" />
+          <h3>Harga: $5,000</h3>
+          <button onclick="beliMobil('', 5000)">Beli</button>
+        </li>
+        <hr />
+        <li>
+          <h2>TOYOTA LAND CRUISER</h2>
+          <img src="land.jpg" width="400" />
+          <h3>Harga: $10,000</h3>
+          <button onclick="beliMobil('', 10000)">Beli</button>
+        </li>
+        <hr />
+      </ul>
+    </section>
+
+    <section id="pembelian">
+      <h2>Detail Pembelian</h2>
+      <p>Anda telah memilih:</p>
+      <p id="mobil-dipilih">-</p>
+      <p>Total Harga: $<span id="total-harga">0</span></p>
+
+      <h3>Informasi Pelanggan</h3>
+      <form>
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" name="alamat" required></textarea><br />
+
+        <label for="metode-pembayaran">Metode Pembayaran:</label>
+        <select id="metode-pembayaran" name="metode-pembayaran" required>
+          <option value="transfer">Transfer Bank</option>
+          <option value="kartu-kredit">Kartu Kredit</option>
+          <option value="tunai">Tunai</option></select
+        ><br />
+
+        <button onclick="konfirmasiPembelian()">Beli Sekarang</button>
+      </form>
+    </section>
+
+    <section id="konfirmasi">
+      <h2>Konfirmasi Pembelian</h2>
+      <p>Terima kasih atas pembelian Anda!</p>
+      <p>
+        Anda telah memilih MOBIL <span id="konfirmasi-mobil">-</span> dengan
+        total harga $<span id="konfirmasi-total">0</span>.
+      </p>
+      <p>
+        Detail pembelian akan dikirimkan ke email Anda:
+        <span id="konfirmasi-email">-</span>
+      </p>
+    </section>
+
+    <script>
+      let mobilDipilih = "-";
+      let totalHarga = 0;
+
+      function beliMobil(namaMobil, hargaMobil) {
+        mobilDipilih = namaMobil;
+        totalHarga += hargaMobil;
+
+        document.getElementById("mobil-dipilih").textContent = mobilDipilih;
+        document.getElementById("total-harga").textContent = totalHarga;
+      }
+
+      function konfirmasiPembelian() {
+        const nama = document.getElementById("nama").value;
+        const email = document.getElementById("email").value;
+
+        document.getElementById("konfirmasi-mobil").textContent = mobilDipilih;
+        document.getElementById("konfirmasi-total").textContent = totalHarga;
+        document.getElementById("konfirmasi-email").textContent = email;
+
+        // Sembunyikan bagian pembelian dan tampilkan bagian konfirmasi
+        document.getElementById("pembelian").style.display = "none";
+        document.getElementById("konfirmasi").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

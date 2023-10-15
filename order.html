@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Mahasiswa</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: #f8f9fa; /* Warna latar belakang */
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #007bff; /* Warna teks */
+    }
+    /* Gaya untuk tombol "Kirim" */
+    .btn-info {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    /* Gaya untuk label */
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+  <body>
+    <!-- Menu Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="#">Order</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="beranda.html" class="nav-link">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a href="produk.html" class="nav-link">Produk</a>
+              </li>
+              <li class="nav-item">
+                <a href="order.html" class="nav-link">Order</a>
+              </li>
+              <li class="nav-item">
+                <a href="about us.html" class="nav-link">About us</a>
+              </li>
+              <li class="nav-item">
+                <a href="contacus.html" class="nav-link">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <section id="produk" class="container mt-4">
+        <h2 class="text-center">Produk Tersedia</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="vy.jpg" class="card-img-top" alt="BUGATTI CHIRON">
+                    <div class="card-body">
+                        <h5 class="card-title">BUGATTI CHIRON</h5>
+                        <p class="card-text">Kondisi sudah pernah di pakai (BEKAS)</p>
+                        <p class="card-text">Harga: $64,000</p>
+                        <button class="btn btn-primary" onclick="beliProduk('BUGATTI CHIRON', 64000)">Beli</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="119.jpg" class="card-img-top" alt="PORSCHE 911">
+                    <div class="card-body">
+                        <h5 class="card-title">PORSCHE 911</h5>
+                        <p class="card-text">Kondisi sudah pernah di pakai (BEKAS)</p>
+                        <p class="card-text">Harga: $50,000</p>
+                        <button class="btn btn-primary" onclick="beliProduk('PORSCHE 911', 50000)">Beli</button>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="rl.jpg" class="card-img-top" alt="ROLL ROYCE">
+                <div class="card-body">
+                    <h5 class="card-title">ROLL ROYCE</h5>
+                    <p class="card-text">Kondisi sudah pernah di pakai (BEKAS)</p>
+                    <p class="card-text">Harga: $80,000</p>
+                    <button class="btn btn-primary" onclick="beliProduk('ROLL ROYCE', 80000)">Beli</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="40394.jpg" class="card-img-top" alt="PAGANI HUAYRA">
+                <div class="card-body">
+                    <h5 class="card-title">PAGANI HUAYRA</h5>
+                    <p class="card-text">Kondisi sudah pernah di pakai (BEKAS)</p>
+                    <p class="card-text">Harga: $90,000</p>
+                    <button class="btn btn-primary" onclick="beliProduk('PAGANI HUAYRA', 90000)">Beli</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="laferari.jpg!d" class="card-img-top" alt="FERRARI">
+                <div class="card-body">
+                    <h5 class="card-title">FERRARI</h5>
+                    <p class="card-text">Kondisi sudah pernah di pakai (BEKAS)</p>
+                    <p class="card-text">Harga: $100,000</p>
+                    <button class="btn btn-primary" onclick="beliProduk('FERRARI', 100000)">Beli</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="pra.jpg" class="card-img-top" alt="SUPRA MK4">
+                <div class="card-body">
+                    <h5 class="card-title">SUPRA MK4</h5>
+                    <p class="card-text">Kondisi sudah pernah di pakai (BEKAS)</p>
+                    <p class="card-text">Harga: $15,000</p>
+                    <button class="btn btn-primary" onclick="beliProduk('SUPRA MK4', 15000)">Beli</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="jdm.jpg" class="card-img-top" alt="BUGATTI CHIRON">
+                <div class="card-body">
+                    <h5 class="card-title">NISSAN SKYLINE R34</h5>
+                    <p class="card-text">Kondisi sudah pernah di pakai (BEKAS)</p>
+                    <p class="card-text">Harga: $20,000</p>
+                    <button class="btn btn-primary" onclick="beliProduk('NISSAN SKYLINE R34', 20000)">Beli</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="mitsu.jpg" class="card-img-top" alt="MITSUBISHI EVO 10">
+                <div class="card-body">
+                    <h5 class="card-title">MITSUBISHI EVO 10</h5>
+                    <p class="card-text">Kondisi sudah pernah di pakai (BEKAS)</p>
+                    <p class="card-text">Harga: $25,000</p>
+                    <button class="btn btn-primary" onclick="beliProduk('MITSUBISHI EVO 10', 25000)">Beli</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="supir.jpg" class="card-img-top" alt="SUPRA MK5">
+                <div class="card-body">
+                    <h5 class="card-title">SUPRA MK5</h5>
+                    <p class="card-text">Kondisi sudah pernah di pakai (BEKAS)</p>
+                    <p class="card-text">Harga: $40,000</p>
+                    <button class="btn btn-primary" onclick="beliProduk('SUPRA MK5', 40000)">Beli</button>
+                </div>
+            </div>
+    </section>
+
+    <section id="keranjang" class="container mt-4">
+        <h2 class="text-center">Keranjang Belanja</h2>
+        <ul id="keranjang-list"></ul>
+        <p class="text-center">Total Harga: $<span id="total-harga">0</span></p>
+        <button class="btn btn-success btn-block" onclick="selesaikanPembelian()">Selesaikan Pembelian</button>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        let keranjang = [];
+        let totalHarga = 0;
+
+        function beliProduk(namaProduk, hargaProduk) {
+            keranjang.push({ nama: namaProduk, harga: hargaProduk });
+            totalHarga += hargaProduk;
+            tampilkanKeranjang();
+        }
+
+        function tampilkanKeranjang() {
+            const keranjangList = document.getElementById("keranjang-list");
+            keranjangList.innerHTML = "";
+            keranjang.forEach((item) => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <h3>${item.nama}</h3>
+                    <p>Harga: $${item.harga}</p>
+                `;
+                keranjangList.appendChild(listItem);
+            });
+            const totalHargaElement = document.getElementById("total-harga");
+            totalHargaElement.textContent = totalHarga;
+        }
+
+        function selesaikanPembelian() {
+            alert(`Pembelian berhasil! Total harga: $${totalHarga}`);
+            keranjang = [];
+            totalHarga = 0;
+            tampilkanKeranjang();
+        }
+    </script>
+</body>
+</html>
